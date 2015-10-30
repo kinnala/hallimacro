@@ -1,0 +1,14 @@
+1. Install xmacro, i.e. 'sudo apt-get install xmacro'
+
+2. Open Halli and save 'Kuukausinäkymä' (Työajat > Lisää työaika > Kuukausinäkymä) as Halli.html
+
+3. Open Matlab and modify the project percentages in compute_seq.m
+
+4. Run compute_seq.m in Matlab
+
+5. After running the following command in shell you have 5 seconds to select
+   the upper-leftmost input field in Halli
+
+      sleep 5; cat halli.xmacro | xmacroplay ":0.0"
+
+6. Magic happens.
