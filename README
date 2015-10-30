@@ -4,11 +4,12 @@
 
 3. Open Matlab and modify the project percentages in compute_seq.m
 
-4. Run compute_seq.m in Matlab
+4. Run compute_seq.m in Matlab. This will write 'halli.xmacro' file which contains
+   keyboard sequence to fill in the table correctly.
 
 5. After running the following command in shell you have 5 seconds to select
-   the upper-leftmost input field in Halli. Make sure that the first input
-   is empty; that wont be emptied by the macro.
+   the upper-leftmost input field in Halli. Make sure that the first field
+   is empty since that wont be emptied by the macro (other fields will).
 
       sleep 5; cat halli.xmacro | xmacroplay -d 20 ":0.0" > /dev/null
 
