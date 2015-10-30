@@ -7,8 +7,9 @@
 4. Run compute_seq.m in Matlab
 
 5. After running the following command in shell you have 5 seconds to select
-   the upper-leftmost input field in Halli
+   the upper-leftmost input field in Halli. Make sure that the first input
+   is empty; that wont be emptied by the macro.
 
-      sleep 5; cat halli.xmacro | xmacroplay -d 20 ":0.0"
+      sleep 5; cat halli.xmacro | xmacroplay -d 20 ":0.0" > /dev/null
 
 6. Magic happens.
