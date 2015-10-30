@@ -12,8 +12,6 @@ for itr=31:-1:27
         break
     end
 end
-%[~,ndays]=system(['grep "<tr " ',hallisrc,' | wc -l']);
-%ndays=str2num(ndays)-3; % 1 header row + 2 footer rows
 
 [~,ninputs]=system(['grep "vsectcode" ',hallisrc,' | wc -l']);
 ninputs=str2num(ninputs);
