@@ -1,11 +1,19 @@
 % write here the percentages of different columns
 projects=[0 0.169 0 0];
 % save 'Kuukausinäkymä' from halli to the following filename
-hallisrc='Halli.html';
+hallisrc='Halli2.html';
 
 % no reason to modify below this
-[~,ndays]=system(['grep "<tr " ',hallisrc,' | wc -l']);
-ndays=str2num(ndays)-3; % 1 header row + 2 footer rows
+for itr=31:-1:27
+    [~,chk]=system(['grep -o "&nbsp;',num2str(itr),'" ',hallisrc,' | wc -l']);
+    chk=str2num(chk);
+    if chk==1
+        ndays=itr;
+        break
+    end
+end
+%[~,ndays]=system(['grep "<tr " ',hallisrc,' | wc -l']);
+%ndays=str2num(ndays)-3; % 1 header row + 2 footer rows
 
 [~,ninputs]=system(['grep "vsectcode" ',hallisrc,' | wc -l']);
 ninputs=str2num(ninputs);
