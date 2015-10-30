@@ -9,6 +9,6 @@
 5. After running the following command in shell you have 5 seconds to select
    the upper-leftmost input field in Halli
 
-      sleep 5; cat halli.xmacro | xmacroplay ":0.0"
+      sleep 5; cat halli.xmacro | xmacroplay -d 20 ":0.0"
 
 6. Magic happens.

@@ -1,7 +1,7 @@
 % write here the percentages of different columns
 projects=[0 0.169 0 0];
 % save 'Kuukausinäkymä' from halli to the following filename
-hallisrc='Halli2.html';
+hallisrc='Halli.html';
 
 % no reason to modify below this
 for itr=31:-1:27
@@ -67,6 +67,8 @@ h=fopen('halli.xmacro','w');
 workhours=round(workhours*1000)/1000;
 workhours=workhours';
 for itr=workhours(:)'
+    fprintf(h,['KeyStrPress BackSpace\n']);
+    fprintf(h,['KeyStrRelease BackSpace\n']);
     if itr~=0
         for jtr=num2str(itr)
             if jtr=='.'
